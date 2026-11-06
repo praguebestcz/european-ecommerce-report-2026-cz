@@ -1,0 +1,12 @@
+{
+  "name": "european-ecommerce-report-2026-cz",
+  "private": true,
+  "type": "module",
+  "description": "Český souhrn European E-commerce Report 2026 chráněný vstupním kódem (Vercel)",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

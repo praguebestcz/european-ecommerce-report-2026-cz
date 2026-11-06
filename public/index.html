@@ -1,0 +1,1111 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Evropská e-commerce 2026</title>
+<meta name="description" content="Český souhrn European E-commerce Report 2026 pro produktové a projektové oddělení.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>
+  try { const t = localStorage.getItem('eer-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f7f6f2;
+  --surface: #ffffff;
+  --surface-2: #efede6;
+  --ink: #12151c;
+  --ink-2: #4a4f5c;
+  --ink-3: #747a87;
+  --line: #dcd9d0;
+  --accent: #1f5fbf;
+  --accent-ink: #ffffff;
+  --accent-soft: #e4ecfa;
+  --series-1: #2a78d6;
+  --series-1-soft: #b9d2f2;
+  --hl: #eb6834;
+  --hl-soft: #fbe1d6;
+  --warn-bg: #fff4dc;
+  --warn-line: #e8b647;
+  --hero-ink: #ffffff;
+  --shadow: 0 1px 2px rgba(18,21,28,.06), 0 4px 16px rgba(18,21,28,.05);
+  --serif: "Iowan Old Style", "Charter", "Source Serif Pro", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0f1218;
+    --surface: #171b23;
+    --surface-2: #1f2430;
+    --ink: #eef0f4;
+    --ink-2: #b8bfcc;
+    --ink-3: #8a92a2;
+    --line: #2c3240;
+    --accent: #5b9bf0;
+    --accent-ink: #0b1220;
+    --accent-soft: #1b2a44;
+    --series-1: #3987e5;
+    --series-1-soft: #2a4568;
+    --hl: #f07a48;
+    --hl-soft: #4a2a1d;
+    --warn-bg: #2e2612;
+    --warn-line: #a87f22;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f1218;
+  --surface: #171b23;
+  --surface-2: #1f2430;
+  --ink: #eef0f4;
+  --ink-2: #b8bfcc;
+  --ink-3: #8a92a2;
+  --line: #2c3240;
+  --accent: #5b9bf0;
+  --accent-ink: #0b1220;
+  --accent-soft: #1b2a44;
+  --series-1: #3987e5;
+  --series-1-soft: #2a4568;
+  --hl: #f07a48;
+  --hl-soft: #4a2a1d;
+  --warn-bg: #2e2612;
+  --warn-line: #a87f22;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.25);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: var(--accent); }
+.nw { white-space: nowrap; }
+h1, h2, h3 { font-family: var(--serif); line-height: 1.15; letter-spacing: -.01em; margin: 0; }
+h2 { font-size: clamp(28px, 4vw, 40px); }
+h3 { font-size: 21px; }
+p { margin: 0 0 1em; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.prose { max-width: 70ch; }
+.muted { color: var(--ink-2); }
+.small { font-size: 14px; }
+.eyebrow { font: 600 13px/1.3 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+
+/* ---------- navigace ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar .wrap { display: flex; align-items: center; gap: 16px; height: 56px; }
+.brand { font: 700 15px/1 var(--sans); color: var(--ink); text-decoration: none; white-space: nowrap; }
+.brand span { color: var(--ink-3); font-weight: 500; }
+.nav { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  color: var(--ink-2); text-decoration: none; font-size: 14px; padding: 7px 10px; border-radius: 8px; white-space: nowrap;
+}
+.nav a:hover { background: var(--surface-2); color: var(--ink); }
+.nav a.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.tools { display: flex; gap: 6px; align-items: center; }
+.iconbtn {
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink-2);
+  height: 34px; min-width: 34px; border-radius: 9px; cursor: pointer; font: 500 13px var(--sans);
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0 10px; text-decoration: none;
+}
+.iconbtn:hover { color: var(--ink); border-color: var(--ink-3); }
+
+/* ---------- hero ---------- */
+.hero {
+  position: relative; color: var(--hero-ink); overflow: hidden;
+  background: #071226 url("/img/cover.jpg") center 35% / cover no-repeat;
+}
+.hero::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(4,10,24,.92) 0%, rgba(4,10,24,.72) 45%, rgba(4,10,24,.15) 100%);
+}
+.hero .wrap { position: relative; padding-top: clamp(56px, 10vw, 120px); padding-bottom: clamp(56px, 9vw, 110px); }
+.hero .eyebrow { color: #9cc2ff; }
+.hero h1 { font-size: clamp(38px, 6.4vw, 72px); max-width: 15ch; }
+.hero .lead { font-size: clamp(18px, 2.1vw, 21px); max-width: 52ch; margin: 22px 0 30px; color: #d6e1f5; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 600 16px/1 var(--sans);
+  padding: 15px 20px; border-radius: 12px; border: 1px solid transparent; cursor: pointer;
+}
+.btn-primary { background: #ffffff; color: #0b1a33; }
+.btn-primary:hover { background: #e8f0ff; }
+.btn-ghost { color: #fff; border-color: rgba(255,255,255,.4); }
+.btn-ghost:hover { background: rgba(255,255,255,.1); }
+.btn small { font-weight: 500; opacity: .7; font-size: 13px; }
+.hero .meta { margin-top: 28px; font-size: 14px; color: #a9b7d0; max-width: 60ch; }
+
+/* ---------- sekce ---------- */
+section.block { padding: clamp(56px, 8vw, 96px) 0; border-bottom: 1px solid var(--line); }
+section.block.alt { background: var(--surface); }
+.sec-head { margin-bottom: 36px; }
+.sec-head p { margin-top: 14px; font-size: 18px; color: var(--ink-2); max-width: 66ch; }
+
+/* KPI */
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.kpi {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 22px 20px;
+  box-shadow: var(--shadow);
+}
+.kpi .v { font: 700 clamp(30px, 3.6vw, 40px)/1.05 var(--serif); letter-spacing: -.02em; }
+.kpi .l { font-weight: 600; margin-top: 8px; }
+.kpi .d { color: var(--ink-2); font-size: 14.5px; margin-top: 4px; line-height: 1.45; }
+.kpi.cz { border-color: var(--hl); background: linear-gradient(180deg, var(--hl-soft), var(--surface) 70%); }
+.tag { display: inline-block; font: 600 12px/1 var(--sans); padding: 5px 8px; border-radius: 6px; background: var(--accent-soft); color: var(--accent); margin-bottom: 12px; }
+.tag.cz { background: var(--hl); color: #fff; }
+
+/* zjištění */
+.findings { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; counter-reset: f; }
+.finding { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; position: relative; }
+.finding::before {
+  counter-increment: f; content: counter(f, decimal-leading-zero);
+  font: 700 14px var(--sans); color: var(--accent); display: block; margin-bottom: 10px;
+}
+.finding h3 { font-size: 20px; margin-bottom: 10px; }
+.finding p { color: var(--ink-2); font-size: 15.5px; margin: 0; }
+
+/* karty s grafy */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; min-width: 0; }
+section.alt .card { background: var(--bg); }
+.card h3 { font-size: 19px; margin-bottom: 4px; }
+.card .sub { color: var(--ink-2); font-size: 14.5px; margin-bottom: 18px; }
+.card.wide { grid-column: 1 / -1; }
+.src { font-size: 12.5px; color: var(--ink-3); margin-top: 14px; }
+
+.seg { display: inline-flex; flex-wrap: wrap; gap: 4px; background: var(--surface-2); padding: 4px; border-radius: 10px; margin-bottom: 18px; }
+.seg button {
+  border: 0; background: transparent; color: var(--ink-2); font: 500 14px var(--sans);
+  padding: 8px 12px; border-radius: 7px; cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); font-weight: 600; box-shadow: var(--shadow); }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: flex-start; }
+
+/* sloupcový graf (HTML) */
+.cols { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px; align-items: end; height: 240px; padding-top: 34px; border-bottom: 1px solid var(--line); }
+.col { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; position: relative; cursor: default; }
+.col .bar { width: min(100%, 64px); background: var(--series-1); border-radius: 4px 4px 0 0; transition: height .5s ease; position: relative; }
+.col.f .bar { background: repeating-linear-gradient(135deg, var(--series-1) 0 5px, var(--series-1-soft) 5px 9px); }
+.col.hl .bar { background: var(--hl); }
+.col.hl.f .bar { background: repeating-linear-gradient(135deg, var(--hl) 0 5px, var(--hl-soft) 5px 9px); }
+.col .val { font: 600 13.5px/1.2 var(--sans); margin-bottom: 6px; text-align: center; white-space: nowrap; }
+.col .val small { display: block; font-weight: 500; color: var(--ink-3); font-size: 12px; }
+.col-labels { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px; margin-top: 8px; }
+.col-labels div { text-align: center; font-size: 13px; color: var(--ink-2); }
+.col-notes { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 10px; margin-top: 4px; }
+.col-notes div { text-align: center; font-size: 12px; color: var(--ink-3); line-height: 1.3; }
+.col-notes .pos { color: #1a8a5a; } .col-notes .neg { color: #c2412d; }
+:root[data-theme="dark"] .col-notes .pos { color: #4cc38a; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .col-notes .pos { color: #4cc38a; } }
+
+/* horizontální seznam barů */
+.bars { display: grid; gap: 4px; }
+.brow { display: grid; grid-template-columns: minmax(110px, 170px) 1fr 70px; gap: 12px; align-items: center; padding: 3px 6px; border-radius: 6px; }
+.brow:hover { background: var(--surface-2); }
+.brow .n { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brow .r { color: var(--ink-3); font-variant-numeric: tabular-nums; display: inline-block; min-width: 2.2em; }
+.brow .t { height: 14px; background: transparent; position: relative; }
+.brow .b { height: 100%; background: var(--series-1); border-radius: 0 4px 4px 0; transition: width .45s ease; min-width: 2px; }
+.brow .b.neg { background: var(--ink-3); }
+.brow .v { font: 600 14px var(--sans); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.brow.hl { background: var(--hl-soft); }
+.brow.hl .b { background: var(--hl); }
+.brow.hl .n { font-weight: 700; }
+.bars.compact .brow { padding: 1px 6px; }
+.bars.compact .brow .t { height: 11px; }
+.rank-note { font-size: 15px; margin: 0 0 14px; }
+.rank-note b { color: var(--hl); }
+
+/* 100% skládaný bar */
+.stack { display: flex; height: 34px; border-radius: 6px; overflow: hidden; gap: 2px; background: var(--surface); }
+.stack div { display: flex; align-items: center; justify-content: center; font: 600 13px var(--sans); color: #fff; min-width: 0; }
+.stack-row { display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: center; margin-bottom: 10px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; color: var(--ink-2); margin-top: 12px; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -1px; margin-right: 6px; }
+.di-1 { background: #b9d2f2; color: #0b1a33 !important; } .di-2 { background: #7aaae8; color: #0b1a33 !important; }
+.di-3 { background: #2a78d6; } .di-4 { background: #134a91; }
+
+/* ČR */
+.cz-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 20px; }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.fact { background: var(--surface-2); border-radius: 10px; padding: 12px 14px; }
+.fact b { display: block; font: 700 22px/1.1 var(--serif); }
+.fact span { display: block; font-size: 13.5px; line-height: 1.4; color: var(--ink-2); margin-top: 4px; }
+.note {
+  background: var(--warn-bg); border: 1px solid var(--warn-line); border-radius: 10px; padding: 14px 16px; font-size: 14.5px; margin-top: 16px;
+}
+.note b { font-weight: 700; }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+th, td { text-align: right; padding: 10px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; font-variant-numeric: tabular-nums; }
+th:first-child, td:first-child { text-align: left; }
+th { font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); font-weight: 600; cursor: pointer; user-select: none; }
+th:hover { color: var(--ink); }
+th[aria-sort]::after { content: " ↓"; } th[aria-sort="ascending"]::after { content: " ↑"; }
+tr.hl td { background: var(--hl-soft); font-weight: 700; }
+tr.agg td { color: var(--ink-2); font-style: italic; }
+.table-scroll { overflow-x: auto; margin: 0 -4px; padding: 0 4px; }
+td:last-child { white-space: normal; min-width: 150px; text-align: left; }
+th:last-child { text-align: left; }
+td .scope { font-size: 12.5px; color: var(--ink-3); font-weight: 500; }
+
+.interview { display: grid; grid-template-columns: 96px 1fr; gap: 20px; align-items: start; }
+.interview img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 3px solid var(--surface); box-shadow: var(--shadow); }
+.interview ul { padding-left: 20px; margin: 12px 0 0; }
+.interview li { margin-bottom: 8px; }
+blockquote {
+  margin: 20px 0 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--hl);
+  font: italic 21px/1.45 var(--serif); color: var(--ink);
+}
+blockquote cite { display: block; font: 500 13.5px var(--sans); color: var(--ink-3); margin-top: 8px; font-style: normal; }
+
+/* trendy */
+.trend { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; padding: 32px 0; border-top: 1px solid var(--line); }
+.trend:first-of-type { border-top: 0; padding-top: 0; }
+.trend h3 { font-size: 25px; margin-bottom: 12px; }
+.trend .facts-list { margin: 0; padding-left: 20px; color: var(--ink-2); }
+.trend .facts-list li { margin-bottom: 8px; }
+.trend .facts-list b { color: var(--ink); }
+.impact { background: var(--accent-soft); border-radius: var(--radius); padding: 22px 24px; align-self: start; }
+.impact h4 { margin: 0 0 10px; font: 700 13px var(--sans); letter-spacing: .07em; text-transform: uppercase; color: var(--accent); }
+.impact dl { margin: 0; }
+.impact dt { font-weight: 700; font-size: 14.5px; margin-top: 10px; }
+.impact dt:first-child { margin-top: 0; }
+.impact dd { margin: 2px 0 0; font-size: 15px; color: var(--ink-2); }
+.pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); margin: 0 4px 4px 0; }
+
+.checklist { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px 28px; padding: 0; margin: 0; list-style: none; }
+.checklist li { position: relative; padding-left: 32px; font-size: 15.5px; }
+.checklist li::before {
+  content: ""; position: absolute; left: 0; top: 3px; width: 18px; height: 18px; border-radius: 5px; border: 2px solid var(--accent);
+}
+
+/* patička */
+.download {
+  background: #0b1a33 url("/img/cover.jpg") center 60% / cover; color: #fff; border-radius: 20px; padding: clamp(28px, 5vw, 48px);
+  position: relative; overflow: hidden;
+}
+.download::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,10,24,.94), rgba(4,10,24,.6)); }
+.download > * { position: relative; }
+.download h2 { margin-bottom: 12px; }
+.download p { color: #c9d5ea; max-width: 60ch; }
+footer { padding: 40px 0 60px; font-size: 13.5px; color: var(--ink-3); }
+footer p { max-width: 90ch; }
+
+/* tooltip */
+.tip {
+  position: fixed; z-index: 100; pointer-events: none; background: var(--ink); color: var(--bg);
+  font: 500 13px/1.4 var(--sans); padding: 8px 10px; border-radius: 8px; max-width: 260px; opacity: 0; transition: opacity .12s;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+.tip.on { opacity: 1; }
+
+@media (max-width: 900px) {
+  .kpis { grid-template-columns: 1fr 1fr; }
+  .grid-2, .cz-grid, .trend { grid-template-columns: 1fr; }
+  .trend { gap: 18px; }
+}
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .wrap { padding: 0 16px; }
+  .kpis { grid-template-columns: 1fr; }
+  .brand span { display: none; }
+  .card { padding: 18px 14px; }
+  .brow { grid-template-columns: 112px 1fr 56px; gap: 8px; padding: 3px 2px; }
+  .brow .n { font-size: 13px; }
+  .brow .v { font-size: 13px; }
+  .cols { gap: 5px; height: 210px; }
+  .col-labels, .col-notes { gap: 5px; }
+  .col .val { font-size: 11.5px; }
+  .col .val small { font-size: 10.5px; }
+  .col-labels div { font-size: 11.5px; }
+  .col-notes div { font-size: 10.5px; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .interview { grid-template-columns: 1fr; }
+  .stack-row { grid-template-columns: 1fr; gap: 4px; }
+  .hero::before { background: linear-gradient(180deg, rgba(4,10,24,.85), rgba(4,10,24,.75)); }
+  .btn { width: 100%; justify-content: center; }
+  .topbar .tools .lbl { display: none; }
+}
+@media print {
+  .topbar, .seg, .tools, .cta-row { display: none !important; }
+  .hero { background: none; color: #000; } .hero::before { display: none; }
+  .hero .lead, .hero .meta { color: #333; }
+  section.block { padding: 24px 0; break-inside: avoid-page; }
+  .card, .kpi, .finding { break-inside: avoid; box-shadow: none; }
+  .download { background: none; color: #000; } .download::before { display: none; } .download p { color: #333; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">EER&nbsp;2026 <span>· český souhrn</span></a>
+    <nav class="nav" aria-label="Sekce">
+      <a href="#klicova-cisla">Klíčová čísla</a>
+      <a href="#zjisteni">Zjištění</a>
+      <a href="#evropa">Evropa v&nbsp;datech</a>
+      <a href="#zebricky">Žebříčky zemí</a>
+      <a href="#cesko">Česko a&nbsp;střední Evropa</a>
+      <a href="#trendy">Trendy a&nbsp;dopady</a>
+      <a href="#metodika">Metodika</a>
+    </nav>
+    <div class="tools">
+      <button class="iconbtn" id="themeBtn" type="button" aria-label="Přepnout světlý/tmavý režim" title="Světlý/tmavý režim">◐</button>
+      <a class="iconbtn" href="/api/logout" title="Odhlásit"><span aria-hidden="true">⎋</span><span class="lbl">Odhlásit</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">European <span class="nw">E-commerce</span> Report&nbsp;2026 · souhrn</div>
+    <h1>Evropská <span class="nw">e-commerce</span> 2026</h1>
+    <p class="lead">Co z&nbsp;nového reportu Ecommerce Europe a&nbsp;EuroCommerce potřebuje vědět produktový a&nbsp;projektový tým: čísla za&nbsp;38&nbsp;evropských zemí, pohled na&nbsp;Česko a&nbsp;střední Evropu a&nbsp;trendy, které budou ovlivňovat naše <span class="nw">e-shopy</span> v&nbsp;roce&nbsp;2027.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://www.eurocommerce.eu/app/uploads/2026/09/cmi2026-light.pdf" target="_blank" rel="noopener">
+        <span aria-hidden="true">↓</span> Stáhnout celý report <small>PDF · 109&nbsp;stran · 2&nbsp;MB · EN</small>
+      </a>
+      <a class="btn btn-ghost" href="#cesko">Rovnou na&nbsp;Česko →</a>
+    </div>
+    <p class="meta">Zdroj: Weltevreden, J.&nbsp;W.&nbsp;J. (2026). <i>European <span class="nw">E-commerce</span> Report&nbsp;2026.</i> Amsterdam University of&nbsp;Applied Sciences &amp; Ecommerce Europe, ve&nbsp;spolupráci s&nbsp;EuroCommerce. Vydáno v&nbsp;září&nbsp;2026, data za&nbsp;rok&nbsp;2025 a&nbsp;prognóza na&nbsp;rok&nbsp;2026.</p>
+  </div>
+</section>
+
+<!-- KLÍČOVÁ ČÍSLA -->
+<section class="block" id="klicova-cisla">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">TL;DR</div>
+      <h2>Šest čísel, která stačí znát</h2>
+    </div>
+    <div class="kpis">
+      <div class="kpi">
+        <span class="tag">Evropa · 2025</span>
+        <div class="v">911&nbsp;mld.&nbsp;€</div>
+        <div class="l">Obrat B2C <span class="nw">e-commerce</span></div>
+        <div class="d">+7&nbsp;% meziročně, po&nbsp;očištění o&nbsp;inflaci +4&nbsp;% (2024: 842&nbsp;mld.&nbsp;€)</div>
+      </div>
+      <div class="kpi">
+        <span class="tag">Evropa · prognóza 2026</span>
+        <div class="v">961&nbsp;mld.&nbsp;€</div>
+        <div class="l">Očekávaný obrat</div>
+        <div class="d">Zhruba +5&nbsp;% nominálně, reálně +3&nbsp;%. Růst už táhne skutečná poptávka, ne&nbsp;inflace.</div>
+      </div>
+      <div class="kpi">
+        <span class="tag">Evropa · prognóza 2026</span>
+        <div class="v">77&nbsp;%</div>
+        <div class="l">Nakupuje online</div>
+        <div class="d">Podíl lidí ve&nbsp;věku 16–74&nbsp;let, kteří nakoupili zboží či služby online (2021: 68&nbsp;%)</div>
+      </div>
+      <div class="kpi">
+        <span class="tag">Evropa · prognóza 2026</span>
+        <div class="v">3,77&nbsp;%</div>
+        <div class="l">Podíl <span class="nw">e-commerce</span> na&nbsp;HDP</div>
+        <div class="d"><span class="nw">E-GDP</span> roste od&nbsp;roku&nbsp;2022 každý rok; nejvyšší je v&nbsp;jižní Evropě (4,44&nbsp;%)</div>
+      </div>
+      <div class="kpi">
+        <span class="tag">EU-27 · prognóza 2026</span>
+        <div class="v">757&nbsp;mld.&nbsp;€</div>
+        <div class="l">Obrat B2C v&nbsp;EU-27</div>
+        <div class="d">Růst kolem 6&nbsp;%; v&nbsp;roce&nbsp;2025 reálně +5&nbsp;%. Online nakupuje 72&nbsp;% lidí, stejně jako v&nbsp;roce&nbsp;2024.</div>
+      </div>
+      <div class="kpi cz">
+        <span class="tag cz">Česko · 2025</span>
+        <div class="v">12,1&nbsp;mld.&nbsp;€</div>
+        <div class="l">298&nbsp;mld.&nbsp;Kč, 84&nbsp;% lidí nakupuje online</div>
+        <div class="d">+6&nbsp;% v&nbsp;korunách, 9. nejvyšší podíl online nakupujících ze&nbsp;38&nbsp;zemí. Prognóza 2026: 313&nbsp;mld.&nbsp;Kč.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZJIŠTĚNÍ -->
+<section class="block alt" id="zjisteni">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Hlavní zjištění</div>
+      <h2>Pět věcí, které report říká</h2>
+    </div>
+    <div class="findings">
+      <article class="finding">
+        <h3>Růst je opět reálný</h3>
+        <p>Po&nbsp;letech, kdy obrat nafukovala inflace, roste evropská <span class="nw">e-commerce</span> i&nbsp;po&nbsp;očištění: +4&nbsp;% v&nbsp;roce&nbsp;2025 a&nbsp;očekávaná +3&nbsp;% v&nbsp;roce&nbsp;2026. Všechny regiony rostly reálně, nejrychleji jih (+8&nbsp;%), pak střední a&nbsp;východní Evropa (+5&nbsp;%).</p>
+      </article>
+      <article class="finding">
+        <h3>Zákazník je citlivý na&nbsp;cenu</h3>
+        <p>Asociace napříč Evropou hlásí přesun k&nbsp;levnějším alternativám a&nbsp;slevám. V&nbsp;Polsku 66&nbsp;% lidí nakupuje online víc právě kvůli ceně, v&nbsp;Nizozemsku roste nákup u&nbsp;hráčů mimo EU. Zároveň ale zákazník nechce slevit z&nbsp;rychlého doručení a&nbsp;snadného vracení.</p>
+      </article>
+      <article class="finding">
+        <h3>Agentní AI je téma roku</h3>
+        <p>Otázka na&nbsp;agentní AI zazněla ve&nbsp;všech rozhovorech. Zatím mění hlavně objevování a&nbsp;srovnávání produktů, ne&nbsp;samotný nákup. V&nbsp;Dánsku už 45&nbsp;% spotřebitelů použilo AI při nákupu online. Malé firmy hrozí, že zaostanou.</p>
+      </article>
+      <article class="finding">
+        <h3>Výdejní boxy převzaly poslední míli</h3>
+        <p>Doručení mimo domov roste téměř všude. Ve&nbsp;Finsku jde 44&nbsp;% zásilek do&nbsp;boxů, v&nbsp;Česku je přes 15&nbsp;000&nbsp;boxů (před třemi lety 6&nbsp;000), v&nbsp;Polsku dává boxy přednost 66&nbsp;% nakupujících.</p>
+      </article>
+      <article class="finding">
+        <h3>Férová soutěž s&nbsp;platformami mimo EU</h3>
+        <p>V&nbsp;červenci&nbsp;2026 skončilo osvobození od&nbsp;cla pro zásilky do&nbsp;150&nbsp;€, většina celní reformy ale platí až od&nbsp;konce roku&nbsp;2027. Temu je v&nbsp;Rakousku už dvojkou za&nbsp;Amazonem. Asociace volají po&nbsp;rychlejším vymáhání pravidel a&nbsp;jednodušší regulaci.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EVROPA V DATECH -->
+<section class="block" id="evropa">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Evropa v&nbsp;datech</div>
+      <h2>Trh, který roste stabilně</h2>
+      <p>Evropa má 591&nbsp;milionů obyvatel, 95&nbsp;% z&nbsp;nich ve&nbsp;věku 16–74&nbsp;let je online a&nbsp;HDP by v&nbsp;roce&nbsp;2026 mělo dosáhnout 25,5&nbsp;bilionu&nbsp;€. Report pokrývá 38&nbsp;zemí rozdělených do&nbsp;pěti regionů.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card wide">
+        <h3>Obrat B2C <span class="nw">e-commerce</span></h3>
+        <div class="sub">v&nbsp;mld.&nbsp;€, 2026 = prognóza (šrafovaně)</div>
+        <div class="seg" role="group" aria-label="Území" data-target="turnover">
+          <button type="button" aria-pressed="true" data-key="europe">Evropa (38&nbsp;zemí)</button>
+          <button type="button" aria-pressed="false" data-key="eu27">EU-27</button>
+        </div>
+        <div id="chart-turnover"></div>
+        <div class="src">Zdroj: European <span class="nw">E-commerce</span> Report&nbsp;2026, s.&nbsp;2, 6 a&nbsp;11. Reálný růst = očištěný o&nbsp;inflaci (MMF).</div>
+      </div>
+
+      <div class="card">
+        <h3>Kolik lidí nakupuje online</h3>
+        <div class="sub">% populace 16–74&nbsp;let, Evropa</div>
+        <div id="chart-shoppers"></div>
+        <div class="src">Zdroj: s.&nbsp;6 (Eurostat, DataReportal, Statista)</div>
+      </div>
+      <div class="card">
+        <h3>Podíl <span class="nw">e-commerce</span> na&nbsp;HDP (<span class="nw">E-GDP</span>)</h3>
+        <div class="sub">% HDP, Evropa</div>
+        <div id="chart-egdp"></div>
+        <div class="src">Zdroj: s.&nbsp;6 (MMF, národní asociace, Statista)</div>
+      </div>
+
+      <div class="card wide">
+        <h3>Pět regionů Evropy</h3>
+        <div class="sub">rok&nbsp;2025</div>
+        <div class="seg" role="group" aria-label="Metrika regionů" data-target="regions">
+          <button type="button" aria-pressed="true" data-key="share">Podíl na&nbsp;obratu</button>
+          <button type="button" aria-pressed="false" data-key="shoppers">Online nakupující</button>
+          <button type="button" aria-pressed="false" data-key="egdp"><span class="nw">E-GDP</span></button>
+          <button type="button" aria-pressed="false" data-key="internet">Uživatelé internetu</button>
+        </div>
+        <div id="chart-regions" class="bars"></div>
+        <p class="small muted" style="margin:14px 0 0">Západní Evropa (mj. Německo, Francie, Spojené království, Benelux) tvoří 57&nbsp;% obratu. Severní Evropa má nejvíc online nakupujících (85&nbsp;%), jih nejvyšší podíl na&nbsp;HDP. <b>Česko patří do&nbsp;střední Evropy</b> spolu s&nbsp;Rakouskem, Maďarskem, Polskem, Slovenskem, Slovinskem a&nbsp;Švýcarskem.</p>
+        <div class="src">Zdroj: s.&nbsp;7</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ŽEBŘÍČKY -->
+<section class="block alt" id="zebricky">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Žebříčky zemí</div>
+      <h2>Kde je Česko mezi 38&nbsp;zeměmi</h2>
+      <p>Přepínejte metriky. Česko je zvýrazněné, filtrem můžete zúžit výběr na&nbsp;EU-27 nebo na&nbsp;region.</p>
+    </div>
+    <div class="card">
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Metrika" data-target="rank">
+          <button type="button" aria-pressed="true" data-key="shoppers">Online nakupující</button>
+          <button type="button" aria-pressed="false" data-key="growth">Růst obratu 2025</button>
+          <button type="button" aria-pressed="false" data-key="ecompc">Útrata na&nbsp;obyvatele</button>
+          <button type="button" aria-pressed="false" data-key="egdp"><span class="nw">E-GDP</span></button>
+          <button type="button" aria-pressed="false" data-key="internet">Internet</button>
+          <button type="button" aria-pressed="false" data-key="gdppc">HDP na&nbsp;obyvatele</button>
+        </div>
+        <div class="seg" role="group" aria-label="Filtr zemí" data-target="rankFilter">
+          <button type="button" aria-pressed="true" data-key="all">Všech 38</button>
+          <button type="button" aria-pressed="false" data-key="eu">EU-27</button>
+          <button type="button" aria-pressed="false" data-key="C">Střední Evropa</button>
+        </div>
+      </div>
+      <p class="rank-note" id="rank-note"></p>
+      <div id="chart-rank" class="bars compact"></div>
+      <div class="src" id="rank-src"></div>
+    </div>
+
+    <div class="grid-2" style="margin-top:20px">
+      <div class="card">
+        <h3>Jak firmy v&nbsp;EU prodávají online</h3>
+        <div class="sub">% firem (10+ zaměstnanců) s&nbsp;webovým prodejem, 2025</div>
+        <div class="seg" role="group" aria-label="Kanál" data-target="web">
+          <button type="button" aria-pressed="true" data-key="webOwn">Vlastní web / aplikace</button>
+          <button type="button" aria-pressed="false" data-key="webMkt">Přes marketplace</button>
+        </div>
+        <div id="chart-web" class="bars compact"></div>
+        <div class="src">Zdroj: s.&nbsp;12 (Eurostat). Nový ukazatel v&nbsp;letošním vydání.</div>
+      </div>
+      <div class="card">
+        <h3>Digitální vyspělost firem v&nbsp;EU</h3>
+        <div class="sub">Index digitální intenzity, 2025 (12 kritérií: od&nbsp;ICT bezpečnosti po&nbsp;webový prodej)</div>
+        <div id="chart-di"></div>
+        <p class="small muted" style="margin-top:16px">Velké firmy jsou z&nbsp;83&nbsp;% na&nbsp;vysoké nebo velmi vysoké úrovni, malé a&nbsp;střední jen z&nbsp;36&nbsp;%. Pro nás to znamená, že u&nbsp;SME klientů nelze předpokládat interní digitální kapacity a&nbsp;projekt musí počítat s&nbsp;větší podporou a&nbsp;jednoduchostí.</p>
+        <div class="src">Zdroj: s.&nbsp;13 (Eurostat). SME = 10–249&nbsp;zaměstnanců.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ČESKO -->
+<section class="block" id="cesko">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Česko a&nbsp;střední Evropa</div>
+      <h2>Česko: vysoký podíl online nakupujících, návrat k&nbsp;růstu</h2>
+      <p>Po&nbsp;poklesu v&nbsp;letech 2022–2023 se český trh vrátil k&nbsp;růstu. Online nakupuje 84&nbsp;% lidí, víc než v&nbsp;Německu nebo Rakousku. Seznam si drží 13&nbsp;% vyhledávání. Tak silný lokální vyhledávač nemá žádná jiná země v&nbsp;reportu.</p>
+    </div>
+
+    <div class="cz-grid">
+      <div class="card">
+        <h3>Obrat B2C <span class="nw">e-commerce</span> v&nbsp;Česku</h3>
+        <div class="sub">v&nbsp;mld.&nbsp;Kč (v&nbsp;závorce mld.&nbsp;€), 2026 = prognóza; pod osou meziroční změna v&nbsp;Kč</div>
+        <div id="chart-cz"></div>
+        <div class="src">Zdroj: s.&nbsp;59 (APEK). Zahrnuje zboží (69&nbsp;%) i&nbsp;služby (31&nbsp;%).</div>
+      </div>
+      <div class="card">
+        <h3>Česko v&nbsp;kostce</h3>
+        <div class="sub">2025, pokud není uvedeno jinak</div>
+        <div class="facts">
+          <div class="fact"><b>84&nbsp;%</b><span>nakupuje online (2021: 75&nbsp;%, 2026: 86&nbsp;%)</span></div>
+          <div class="fact"><b>95&nbsp;%</b><span>používá internet (16–74&nbsp;let)</span></div>
+          <div class="fact"><b>1&nbsp;130&nbsp;€</b><span>útrata online na&nbsp;obyvatele (17. místo)</span></div>
+          <div class="fact"><b>+6&nbsp;%</b><span>růst obratu v&nbsp;Kč (+8&nbsp;% v&nbsp;€)</span></div>
+          <div class="fact"><b>94&nbsp;%</b><span>firem s&nbsp;webovým prodejem prodává přes vlastní web</span></div>
+          <div class="fact"><b>35&nbsp;%</b><span>z&nbsp;nich prodává přes marketplace (EU min. 17&nbsp;%, max. 87&nbsp;%)</span></div>
+          <div class="fact"><b>82&nbsp;/&nbsp;13&nbsp;%</b><span>podíl vyhledávání Google / Seznam</span></div>
+          <div class="fact"><b>15&nbsp;000</b><span>výdejních boxů (před 3&nbsp;lety přes 6&nbsp;000)</span></div>
+        </div>
+        <div class="note"><b>Pozor na&nbsp;<span class="nw">E-GDP</span> Česka.</b> Report uvádí pro ČR podíl na&nbsp;HDP 2,35&nbsp;%, ale počítá s&nbsp;HDP 514&nbsp;mld.&nbsp;€, které odpovídá Rakousku (stejná řada je na&nbsp;s.&nbsp;56 i&nbsp;59). Se&nbsp;skutečným HDP Česka (zhruba 330–350&nbsp;mld.&nbsp;€) vychází podíl kolem 3,5&nbsp;%. Totéž se týká HDP na&nbsp;obyvatele. Při citování proto <span class="nw">E-GDP</span> ČR raději nepoužívejte. <span class="muted">(Naše poznámka, není součástí reportu.)</span></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>Srovnání se&nbsp;střední Evropou</h3>
+      <div class="sub">2025, kliknutím na&nbsp;záhlaví seřadíte</div>
+      <div class="table-scroll">
+        <table id="cee-table">
+          <thead>
+            <tr>
+              <th data-k="name">Země</th>
+              <th data-k="turnover">Obrat (mld.&nbsp;€)</th>
+              <th data-k="growth">Růst</th>
+              <th data-k="shoppers">Online nakupující</th>
+              <th data-k="ecompc">Na&nbsp;obyvatele</th>
+              <th data-k="mkt">Firmy na&nbsp;marketplace</th>
+              <th data-k="scope" style="cursor:default">Rozsah dat</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="small muted" style="margin:14px 0 0">Pozor na&nbsp;srovnatelnost: Rakousko, Maďarsko a&nbsp;Švýcarsko vykazují jen zboží, Česko a&nbsp;Polsko zboží i&nbsp;služby, Slovensko a&nbsp;Slovinsko jsou odhady Statisty. Polsko je v&nbsp;regionu jasným lídrem s&nbsp;obratem 47&nbsp;mld.&nbsp;€ a&nbsp;nejvyšším podílem prodeje přes marketplace.</p>
+      <div class="src">Zdroj: s.&nbsp;7–12, 56–69. Růst v&nbsp;eurech; „Firmy na&nbsp;marketplace“ = podíl firem s&nbsp;webovým prodejem, které prodávají přes marketplace (Švýcarsko není v&nbsp;EU, data nejsou).</div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <div class="interview">
+        <img src="/img/apek-jan-vetyska.jpg" alt="Jan Vetyška" width="96" height="96">
+        <div>
+          <div class="eyebrow" style="margin-bottom:4px">Rozhovor · s.&nbsp;60–61</div>
+          <h3>Jan Vetyška, výkonný ředitel APEK</h3>
+          <ul>
+            <li><b>Regulace:</b> vláda je k&nbsp;<span class="nw">e-commerce</span> vstřícná a&nbsp;s&nbsp;asociací komunikuje. Zjednodušování na&nbsp;úrovni EU je ale podle APEK nedostatečné; názor firem by se měl brát v&nbsp;potaz dřív, ne&nbsp;až dodatečně.</li>
+            <li><b>Cla:</b> zrušení celní výjimky je „naprosto zásadní“ krok k&nbsp;férové soutěži. APEK se mu věnoval dva roky a&nbsp;teď bude hlídat správnou implementaci.</li>
+            <li><b>AI:</b> zákazníci už mění návyky a&nbsp;spoléhají na&nbsp;AI při nakupování; AI agenti podporují nebo nahrazují zaměstnance v&nbsp;mnoha profesích. Nejdůležitější je nezaostat.</li>
+            <li><b>Platby:</b> trh je stabilní a&nbsp;konzervativní. Výjimkou je posun k&nbsp;mobilním platbám. Náklady na&nbsp;platby výrazně nerostou.</li>
+            <li><b>Logistika:</b> hlavním trendem jsou výdejní boxy (přes 15&nbsp;000), roste zájem o&nbsp;doručení mimo domov a&nbsp;dopravci nabízejí přesnější časová okna. Trh je vysoce konkurenční.</li>
+            <li><b>Udržitelnost:</b> největší hráči ji berou vážně (méně odpadu, nízkoemisní doručení), zákazníci se ale rozhodují hlavně podle ceny.</li>
+          </ul>
+          <blockquote>„<span class="nw">E-commerce</span> patří k&nbsp;nejpružnějším odvětvím a&nbsp;i&nbsp;pod současným ekonomickým tlakem vidíme rychlou adaptaci.“<cite>Jan Vetyška, APEK (volný překlad)</cite></blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRENDY -->
+<section class="block alt" id="trendy">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Trendy a&nbsp;dopady</div>
+      <h2>Co to znamená pro naše projekty</h2>
+      <p>Vlevo je, co říkají národní asociace v&nbsp;reportu. Vpravo je naše interpretace pro produktové a&nbsp;projektové oddělení. Ta není součástí reportu a&nbsp;je k&nbsp;diskusi.</p>
+    </div>
+
+    <div class="trend">
+      <div>
+        <h3>Agentní AI a&nbsp;AI ve&nbsp;vyhledávání</h3>
+        <ul class="facts-list">
+          <li><b>Dánsko:</b> 45&nbsp;% spotřebitelů použilo AI při průzkumu nebo nákupu online, většinou jako inspiraci a&nbsp;ke srovnání, ne&nbsp;k&nbsp;delegování rozhodnutí (s.&nbsp;40).</li>
+          <li><b>Francie, Německo, UK:</b> 38&nbsp;% spotřebitelů používá AI nástroje při výběru produktu (McKinsey, citováno ve&nbsp;Španělsku, s.&nbsp;104).</li>
+          <li><b>Nizozemsko:</b> „skutečný game changer“. Tentokrát jsou napřed spotřebitelé a&nbsp;firmy je dohánějí (s.&nbsp;34).</li>
+          <li><b>Německo:</b> AI zatím zásadně nemění zákaznickou cestu, ale roste jako nástroj pro objevování produktů, hlavně u&nbsp;mladých (s.&nbsp;23).</li>
+          <li><b>Lucembursko, Portugalsko:</b> SME hrozí, že zaostanou; velcí hráči se přizpůsobují rychleji (s.&nbsp;31, 100).</li>
+          <li><b>Francie:</b> AI v&nbsp;back-office: aktualizace katalogu, vratky, sklad, účetnictví (s.&nbsp;20).</li>
+        </ul>
+      </div>
+      <aside class="impact">
+        <h4>Dopad na&nbsp;produkt / projekty</h4>
+        <dl>
+          <dt>Strojově čitelný katalog</dt>
+          <dd>Kvalitní strukturovaná data (atributy, schema.org, feedy, dostupnost, ceny) jsou podmínkou, aby <span class="nw">e-shop</span> našli AI asistenti.</dd>
+          <dt>Viditelnost v&nbsp;AI rozhraních</dt>
+          <dd>Vedle SEO řešit i&nbsp;„AI discoverability“. Report zdůrazňuje, že obchodník si má udržet vztah se&nbsp;zákazníkem.</dd>
+          <dt>AI v&nbsp;provozu</dt>
+          <dd>Rychlé výhry jsou generování popisků, zákaznická podpora a&nbsp;zpracování vratek. Nabízet je jako moduly hlavně SME klientům.</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="trend">
+      <div>
+        <h3>Platby: instantní, mobilní, odložené</h3>
+        <ul class="facts-list">
+          <li><b>Polsko:</b> BLIK je primární metodou pro 38&nbsp;% lidí; trh BNPL dosáhl 6,3&nbsp;mld.&nbsp;PLN za&nbsp;H1&nbsp;2025 a&nbsp;přes 55&nbsp;% uživatelů je mladších 24&nbsp;let. 12&nbsp;% opuštěných košíků je kvůli chybějící platební metodě (s.&nbsp;65).</li>
+          <li><b>Nizozemsko:</b> iDEAL (přes 70&nbsp;% online plateb) přechází na&nbsp;evropské Wero; roste BNPL, které ale komplikuje revidovaná směrnice o&nbsp;spotřebitelském úvěru (s.&nbsp;34).</li>
+          <li><b>Německo, Belgie:</b> Wero se v&nbsp;<span class="nw">e-shopech</span> objevilo koncem 2025 (s.&nbsp;24, 17).</li>
+          <li><b>Itálie, Řecko:</b> každá nová metoda zvyšuje konverzi, ale přidává integrace, rekonciliaci a&nbsp;náklady (s.&nbsp;94, 97).</li>
+          <li><b>Česko:</b> konzervativní zákazník, posun hlavně k&nbsp;mobilním platbám (s.&nbsp;60–61).</li>
+        </ul>
+      </div>
+      <aside class="impact">
+        <h4>Dopad na&nbsp;produkt / projekty</h4>
+        <dl>
+          <dt>Platební vrstva jako modul</dt>
+          <dd>Navrhovat checkout tak, aby šlo metody (Apple/Google Pay, BNPL, instantní platby, Wero) přidávat bez přestavby, ideálně přes platební orchestraci.</dd>
+          <dt>Lokální metody pro expanzi</dt>
+          <dd>Pro klienty mířící do&nbsp;Polska je BLIK nutnost, pro Nizozemsko iDEAL/Wero. Do&nbsp;odhadů přeshraničních projektů zahrnout.</dd>
+          <dt>Měřit dopad na&nbsp;konverzi</dt>
+          <dd>U&nbsp;BNPL vyvažovat vyšší poplatky a&nbsp;vyšší konverzi daty, ne&nbsp;odhadem.</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="trend">
+      <div>
+        <h3>Doručení mimo domov a&nbsp;vratky</h3>
+        <ul class="facts-list">
+          <li><b>Finsko:</b> 44&nbsp;% zásilek do&nbsp;výdejních boxů, 41&nbsp;% na&nbsp;výdejní místa, jen 15&nbsp;% domů (ale doručení domů roste nejrychleji) (s.&nbsp;46).</li>
+          <li><b>Česko:</b> přes 15&nbsp;000 boxů, za&nbsp;tři roky víc než dvojnásobek; dopravci zpřesňují časová okna (s.&nbsp;61).</li>
+          <li><b>Polsko:</b> boxy preferuje 66&nbsp;% nakupujících; 15&nbsp;% opuštěných košíků kvůli chybějící metodě doručení (s.&nbsp;65).</li>
+          <li><b>Německo:</b> husté sítě Amazonu a&nbsp;DHL, přibývají boxy více dopravců; výdejní místa mají ale vyšší podíl vratek a&nbsp;podvodů (s.&nbsp;23–24).</li>
+          <li><b>Belgie:</b> velké mezinárodní marketplaces rozšiřují doručení v&nbsp;tentýž den, což zvyšuje tlak na&nbsp;marže lokálních obchodníků (s.&nbsp;17).</li>
+        </ul>
+      </div>
+      <aside class="impact">
+        <h4>Dopad na&nbsp;produkt / projekty</h4>
+        <dl>
+          <dt>Výdejní místa jako standard</dt>
+          <dd>Výběr boxu nebo výdejního místa na&nbsp;mapě (Zásilkovna, PPL, Balíkovna, AlzaBox…) patří do&nbsp;MVP každého checkoutu, ne&nbsp;do&nbsp;fáze&nbsp;2.</dd>
+          <dt>Vratky jako součást UX</dt>
+          <dd>Samoobslužné vratky přes boxy a&nbsp;lepší produktové informace (velikosti, fotky) snižují míru vratek.</dd>
+          <dt>Transparentní doručení</dt>
+          <dd>Přesné termíny, tracking a&nbsp;notifikace jsou dnes konkurenční výhoda i&nbsp;proti velkým platformám.</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="trend">
+      <div>
+        <h3>Levné platformy mimo EU a&nbsp;celní reforma</h3>
+        <ul class="facts-list">
+          <li><b>EU:</b> osvobození od&nbsp;cla pro zboží do&nbsp;150&nbsp;€ z&nbsp;třetích zemí skončilo v&nbsp;červenci&nbsp;2026; většina reformy celního kodexu platí od&nbsp;konce&nbsp;2027 (s.&nbsp;2).</li>
+          <li><b>Rakousko:</b> Temu je dvojkou na&nbsp;domácím trhu za&nbsp;Amazonem a&nbsp;předběhlo Zalando (s.&nbsp;57).</li>
+          <li><b>Estonsko:</b> 40&nbsp;% zásilek je přeshraničních a&nbsp;90&nbsp;% z&nbsp;nich přímo z&nbsp;Asie; po&nbsp;zrušení výjimky z&nbsp;DPH objednávky z&nbsp;Asie dokonce vzrostly desetkrát (s.&nbsp;43).</li>
+          <li><b>Polsko:</b> přeshraniční nákupy vzrostly za&nbsp;rok z&nbsp;15&nbsp;% na&nbsp;39&nbsp;% spotřebitelů, hlavně kvůli ceně (s.&nbsp;65–66).</li>
+          <li><b>Kampaň #Compliance4All:</b> stejná pravidla pro všechny, rychlejší vymáhání (DSA) a&nbsp;méně administrativy pro poctivé firmy (s.&nbsp;2–3).</li>
+        </ul>
+      </div>
+      <aside class="impact">
+        <h4>Dopad na&nbsp;produkt / projekty</h4>
+        <dl>
+          <dt>Nesoutěžit jen cenou</dt>
+          <dd>Lokální <span class="nw">e-shopy</span> vyhrávají důvěrou, rychlostí, servisem a&nbsp;snadnými vratkami. To má být vidět v&nbsp;UX (recenze, garance, dostupnost skladem, doprava).</dd>
+          <dt>Cenová inteligence</dt>
+          <dd>Zákazník srovnává víc než dřív. Má smysl nabízet dynamické akce, věrnostní programy a&nbsp;personalizaci.</dd>
+          <dt>Compliance jako výhoda</dt>
+          <dd>Bezpečnost produktů, transparentní informace o&nbsp;prodejci a&nbsp;ověřená tvrzení komunikovat jako důvod k&nbsp;důvěře.</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="trend">
+      <div>
+        <h3>Udržitelnost, second-hand a&nbsp;marketplaces</h3>
+        <ul class="facts-list">
+          <li><b>Polsko:</b> 56&nbsp;% lidí nakupuje online second-hand, o&nbsp;14&nbsp;p.&nbsp;b. víc než loni (s.&nbsp;66).</li>
+          <li><b>Švédsko:</b> výrazný růst výdeje a&nbsp;vracení „pre-loved“ zboží přes boxy; firmy snižují vratky lepšími informacemi a&nbsp;nástroji na&nbsp;velikosti (s.&nbsp;53–54).</li>
+          <li><b>Španělsko, Rakousko:</b> environmentální tvrzení musí být doložitelná; přibývají QR kódy a&nbsp;digitální produktové pasy (s.&nbsp;57, 104).</li>
+          <li><b>Španělsko:</b> 99&nbsp;% firem říká, že zákazník za&nbsp;udržitelné doručení nepřiplatí (s.&nbsp;106).</li>
+          <li><b>SME nástroje:</b> asociace doporučují CRM, automatizaci marketingu, analytiku, integraci na&nbsp;marketplaces a&nbsp;orchestraci plateb (s.&nbsp;101, 105).</li>
+        </ul>
+      </div>
+      <aside class="impact">
+        <h4>Dopad na&nbsp;produkt / projekty</h4>
+        <dl>
+          <dt>Recommerce moduly</dt>
+          <dd>Výkup, prodej použitého zboží a&nbsp;„druhá životnost“ jako rozšíření <span class="nw">e-shopu</span>, ne&nbsp;samostatný projekt.</dd>
+          <dt>Připravenost na&nbsp;produktové pasy</dt>
+          <dd>Datový model produktu by měl unést materiály, původ, certifikace a&nbsp;opravitelnost.</dd>
+          <dt>Multikanál</dt>
+          <dd>Napojení na&nbsp;marketplaces (Allegro, Kaufland, Amazon) jako standardní integrace. V&nbsp;Polsku na&nbsp;ně prodává 64&nbsp;% firem s&nbsp;webovým prodejem.</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="card" style="margin-top:28px">
+      <h3 style="margin-bottom:6px">Kontrolní seznam pro nové <span class="nw">e-commerce</span> projekty</h3>
+      <p class="sub">Shrnutí výše uvedeného, doporučujeme projít při discovery fázi.</p>
+      <ul class="checklist">
+        <li>Produktová data jsou strukturovaná a&nbsp;exportovatelná pro AI asistenty, srovnávače i&nbsp;marketplaces.</li>
+        <li>Checkout umí přidat novou platební metodu bez přestavby (mobilní peněženky, BNPL, instantní platby).</li>
+        <li>Výdejní boxy a&nbsp;výdejní místa jsou v&nbsp;MVP, včetně mapy a&nbsp;vratek.</li>
+        <li>Je jasné, čím <span class="nw">e-shop</span> vyhrává mimo cenu (servis, rychlost, důvěra), a&nbsp;UX to ukazuje.</li>
+        <li>Je zvážen AI modul pro obsah, zákaznickou podporu nebo vratky.</li>
+        <li>Datový model počítá s&nbsp;udržitelnostními atributy a&nbsp;ověřitelnými tvrzeními.</li>
+        <li>Pro přeshraniční klienty jsou v&nbsp;odhadu lokální platby a&nbsp;dopravci (BLIK, iDEAL/Wero…).</li>
+        <li>Pro SME klienta je v&nbsp;rozpočtu onboarding a&nbsp;podpora, ne&nbsp;jen implementace.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- METODIKA -->
+<section class="block" id="metodika">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Metodika</div>
+      <h2>Jak čísla číst</h2>
+    </div>
+    <div class="grid-2">
+      <div class="prose">
+        <p><b>Obrat B2C <span class="nw">e-commerce</span></b> dodávají národní asociace (data k&nbsp;květnu&nbsp;2026), kde chybí, doplňuje se Statista. Země měří různě: některé jen zboží, jiné zboží i&nbsp;služby. Mezinárodní pořadí podle obratu je proto orientační.</p>
+        <p><b>Online nakupující</b> a&nbsp;<b>uživatelé internetu</b> jsou podíly populace 16–74&nbsp;let (Eurostat, DataReportal, národní statistiky). <b><span class="nw">E-GDP</span></b> je poměr obratu B2C <span class="nw">e-commerce</span> k&nbsp;HDP (MMF).</p>
+      </div>
+      <div class="prose">
+        <p><b>Reálný růst</b> je očištěn o&nbsp;inflaci podle MMF, vážený HDP zemí v&nbsp;regionu. Údaje za&nbsp;<b>rok&nbsp;2026</b> jsou prognóza (v&nbsp;grafech šrafovaně). Čísla jsou zaokrouhlená, součty se proto nemusí přesně shodovat.</p>
+        <p>Tento souhrn je interní pracovní materiál. Data i&nbsp;citace přebírá z&nbsp;reportu, česká interpretace a&nbsp;doporučení v&nbsp;části „Trendy a&nbsp;dopady“ jsou naše.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="border:0">
+  <div class="wrap">
+    <div class="download">
+      <h2>Celý report si přečtěte v&nbsp;originále</h2>
+      <p>109&nbsp;stran: profily všech 38&nbsp;zemí a&nbsp;rozhovory s&nbsp;národními asociacemi o&nbsp;regulaci, udržitelnosti, AI, platbách a&nbsp;logistice. Ke&nbsp;stažení zdarma na&nbsp;webu EuroCommerce.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.eurocommerce.eu/app/uploads/2026/09/cmi2026-light.pdf" target="_blank" rel="noopener"><span aria-hidden="true">↓</span> Stáhnout report <small>PDF · 2&nbsp;MB · EN</small></a>
+        <a class="btn btn-ghost" href="https://www.eurocommerce.eu/app/uploads/2026/09/final-executive-summary-european-e-commerce-report-2026-v6-1.pdf" target="_blank" rel="noopener">Executive summary (PDF)</a>
+        <a class="btn btn-ghost" href="https://www.eurocommerce.eu/european-e-commerce-report/" target="_blank" rel="noopener">Stránka reportu →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Citace dle vydavatele: Weltevreden, J.&nbsp;W.&nbsp;J. (2026). <i>European <span class="nw">E-commerce</span> Report&nbsp;2026.</i> Amsterdam/Brussels: Amsterdam University of&nbsp;Applied Sciences &amp; Ecommerce Europe. Report připravilo Centre for Marketing Innovation (AUAS) pro Ecommerce Europe a&nbsp;EuroCommerce. Titulní fotografie a&nbsp;portrét pocházejí z&nbsp;reportu.</p>
+    <p>Interní materiál pro produktové a&nbsp;projektové oddělení · listopad&nbsp;2026</p>
+  </div>
+</footer>
+
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script>
+(() => {
+  const NB = ' ';
+  const nf = (d = 0) => new Intl.NumberFormat('cs-CZ', { minimumFractionDigits: d, maximumFractionDigits: d });
+  const pct = (v, d = 0) => nf(d).format(v) + NB + '%';
+  const sgn = (v, d = 0) => (v > 0 ? '+' : v < 0 ? '−' : '') + pct(Math.abs(v), d);
+  const eur = (v, d = 0) => nf(d).format(v) + NB + '€';
+  const bn = (v, d = 0) => nf(d).format(v) + NB + 'mld.' + NB + '€';
+  const ty = (s) => String(s)
+    .replace(/(^|[\s(„>])([ksvzouaiKSVZOUAI]) /g, '$1$2' + NB)
+    .replace(/(\d) (%|€|let|zemí|Kč|mld\.)/g, '$1' + NB + '$2')
+    .replace(/ (–|\+ )/g, NB + '$1')
+    .replace(/\b(s|vs|č)\. /g, '$1.' + NB)
+    .replace(/(e-commerce|E-commerce|E-GDP)/g, '<span class="nw">$1</span>');
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  /* ---------- data z reportu ---------- */
+  const TURNOVER = {
+    europe: {
+      label: 'Evropa',
+      rows: [
+        { y: '2021', v: 712 }, { y: '2022', v: 746 }, { y: '2023', v: 792 }, { y: '2024', v: 842 },
+        { y: '2025', v: 911, note: '+7' + NB + '%, reálně +4' + NB + '%' },
+        { y: '2026', v: 961, f: true, note: '+5' + NB + '%, reálně +3' + NB + '%' },
+      ],
+    },
+    eu27: {
+      label: 'EU-27',
+      rows: [
+        { y: '2021', v: 531.0 }, { y: '2022', v: 579.4 }, { y: '2023', v: 620.2 }, { y: '2024', v: 667.6 },
+        { y: '2025', v: 715.8, note: '+7' + NB + '%, reálně +5' + NB + '%' },
+        { y: '2026', v: 757.3, f: true, note: '+6' + NB + '%' },
+      ],
+    },
+  };
+  const SHOPPERS = [68, 69, 71, 73, 75, 77];
+  const EGDP = [3.72, 3.53, 3.56, 3.65, 3.74, 3.77];
+  const YEARS = ['2021', '2022', '2023', '2024', '2025', '2026'];
+
+  const REGIONS = [
+    { n: 'Západní Evropa', share: 57, bn: 523, shoppers: 84, egdp: 3.86, internet: 96 },
+    { n: 'Jižní Evropa', share: 22, bn: 202, shoppers: 63, egdp: 4.44, internet: 92 },
+    { n: 'Střední Evropa', share: 10, bn: 93, shoppers: 74, egdp: 2.82, internet: 93, hl: true },
+    { n: 'Severní Evropa', share: 8, bn: 69, shoppers: 85, egdp: 3.55, internet: 98 },
+    { n: 'Východní Evropa', share: 3, bn: 23, shoppers: 60, egdp: 2.41, internet: 88 },
+  ];
+
+  const M = {"internet":{"Dánsko":100,"Irsko":100,"Nizozemsko":100,"Lucembursko":99,"Švýcarsko":99,"Norsko":99,"Island":99,"Švédsko":99,"Finsko":98,"Spojené království":98,"Belgie":97,"Španělsko":97,"Malta":96,"Francie":96,"Rakousko":96,"Německo":96,"Černá Hora":95,"Estonsko":95,"Česko":95,"Lotyšsko":95,"Rumunsko":95,"Srbsko":94,"Slovensko":94,"Kypr":94,"Maďarsko":93,"Severní Makedonie":93,"Slovinsko":92,"Itálie":91,"Polsko":91,"Bosna a Hercegovina":90,"Portugalsko":90,"Řecko":90,"Bulharsko":90,"Litva":90,"Albánie":89,"Chorvatsko":87,"Ukrajina":82,"Moldavsko":80},"shoppers":{"Irsko":95,"Nizozemsko":94,"Island":93,"Norsko":93,"Spojené království":92,"Dánsko":91,"Švédsko":89,"Švýcarsko":86,"Česko":84,"Finsko":82,"Německo":81,"Francie":80,"Lucembursko":80,"Slovensko":79,"Belgie":79,"Estonsko":77,"Rakousko":73,"Malta":71,"Španělsko":71,"Lotyšsko":70,"Polsko":70,"Řecko":68,"Maďarsko":68,"Ukrajina":67,"Slovinsko":67,"Litva":65,"Kypr":63,"Srbsko":62,"Chorvatsko":62,"Portugalsko":61,"Rumunsko":60,"Itálie":56,"Severní Makedonie":56,"Bulharsko":51,"Bosna a Hercegovina":50,"Černá Hora":45,"Albánie":41,"Moldavsko":29},"growth":{"Ukrajina":44,"Bulharsko":15,"Španělsko":14,"Portugalsko":14,"Chorvatsko":12,"Moldavsko":11,"Srbsko":11,"Slovensko":11,"Litva":11,"Albánie":11,"Lotyšsko":11,"Slovinsko":11,"Estonsko":11,"Rumunsko":10,"Kypr":10,"Polsko":9,"Severní Makedonie":8,"Česko":8,"Švýcarsko":8,"Bosna a Hercegovina":7,"Švédsko":7,"Norsko":7,"Francie":7,"Island":7,"Černá Hora":7,"Itálie":6,"Lucembursko":6,"Malta":6,"Maďarsko":5,"Belgie":5,"Irsko":5,"Spojené království":5,"Řecko":5,"Finsko":5,"Rakousko":4,"Německo":4,"Dánsko":4,"Nizozemsko":-1},"egdp":{"Estonsko":13.82,"Řecko":7.69,"Francie":6.58,"Dánsko":6.52,"Španělsko":6.45,"Polsko":5.17,"Moldavsko":4.84,"Spojené království":4.44,"Portugalsko":3.61,"Rumunsko":3.39,"Nizozemsko":3.02,"Norsko":2.94,"Belgie":2.85,"Černá Hora":2.76,"Itálie":2.76,"Severní Makedonie":2.7,"Irsko":2.59,"Švédsko":2.53,"Česko":2.35,"Bulharsko":2.32,"Německo":2.18,"Bosna a Hercegovina":2.16,"Kypr":2.04,"Finsko":1.99,"Island":1.99,"Rakousko":1.96,"Albánie":1.95,"Švýcarsko":1.82,"Lotyšsko":1.77,"Malta":1.74,"Maďarsko":1.55,"Slovensko":1.52,"Slovinsko":1.45,"Ukrajina":1.42,"Litva":1.39,"Chorvatsko":1.35,"Srbsko":1.25,"Lucembursko":1.16},"gdppc":{"Lucembursko":132367,"Irsko":120474,"Švýcarsko":103376,"Island":86333,"Norsko":83939,"Dánsko":68299,"Nizozemsko":64544,"Rakousko":56372,"Švédsko":55758,"Belgie":54675,"Německo":52999,"Spojené království":51151,"Finsko":49942,"Česko":48120,"Malta":45314,"Francie":44827,"Itálie":38142,"Španělsko":35219,"Slovinsko":33304,"Estonsko":30767,"Litva":29503,"Portugalsko":29462,"Kypr":26636,"Řecko":24958,"Slovensko":24912,"Chorvatsko":24340,"Polsko":23920,"Lotyšsko":23101,"Maďarsko":22644,"Rumunsko":20000,"Bulharsko":17235,"Srbsko":13193,"Černá Hora":12828,"Albánie":9646,"Severní Makedonie":9328,"Bosna a Hercegovina":9265,"Moldavsko":5976,"Ukrajina":4929},"ecompc":{"Dánsko":4456,"Estonsko":4252,"Irsko":3123,"Francie":2949,"Norsko":2466,"Spojené království":2272,"Španělsko":2270,"Nizozemsko":1951,"Řecko":1919,"Švýcarsko":1885,"Island":1715,"Belgie":1558,"Lucembursko":1539,"Švédsko":1411,"Polsko":1236,"Německo":1156,"Česko":1130,"Rakousko":1103,"Portugalsko":1064,"Itálie":1051,"Finsko":994,"Malta":787,"Rumunsko":679,"Kypr":543,"Slovinsko":484,"Lotyšsko":409,"Litva":409,"Bulharsko":399,"Slovensko":380,"Černá Hora":355,"Maďarsko":352,"Chorvatsko":328,"Moldavsko":289,"Severní Makedonie":252,"Bosna a Hercegovina":200,"Albánie":188,"Srbsko":164,"Ukrajina":70},"webOwn":{"Estonsko":97,"Dánsko":96,"Slovensko":96,"Švédsko":95,"Nizozemsko":94,"Česko":94,"Belgie":94,"Francie":94,"Chorvatsko":93,"Finsko":93,"Malta":93,"Španělsko":92,"Rumunsko":91,"Rakousko":90,"Portugalsko":88,"Řecko":87,"Lotyšsko":87,"Maďarsko":86,"Německo":83,"Irsko":81,"Lucembursko":80,"Polsko":78,"Bulharsko":77,"Slovinsko":75,"Kypr":74,"Itálie":73,"Litva":47},"webMkt":{"Litva":87,"Itálie":65,"Polsko":64,"Kypr":61,"Portugalsko":56,"Řecko":55,"Německo":51,"Lucembursko":49,"Bulharsko":47,"Rakousko":46,"Slovinsko":43,"Rumunsko":42,"Maďarsko":41,"Lotyšsko":36,"Španělsko":36,"Česko":35,"Slovensko":33,"Malta":32,"Irsko":32,"Nizozemsko":32,"Belgie":31,"Finsko":31,"Dánsko":28,"Francie":27,"Chorvatsko":26,"Švédsko":25,"Estonsko":17}};
+
+  const REGION_OF = {};
+  [['W', 'Belgie,Francie,Německo,Irsko,Lucembursko,Nizozemsko,Spojené království'],
+   ['N', 'Dánsko,Estonsko,Finsko,Island,Lotyšsko,Litva,Norsko,Švédsko'],
+   ['C', 'Rakousko,Česko,Maďarsko,Polsko,Slovensko,Slovinsko,Švýcarsko'],
+   ['E', 'Albánie,Bosna a Hercegovina,Bulharsko,Chorvatsko,Moldavsko,Černá Hora,Severní Makedonie,Rumunsko,Srbsko,Ukrajina'],
+   ['S', 'Kypr,Řecko,Itálie,Malta,Portugalsko,Španělsko']].forEach(([r, list]) => list.split(',').forEach((c) => (REGION_OF[c] = r)));
+  const EU = new Set(Object.keys(M.webOwn));
+
+  const RANK_META = {
+    shoppers: { t: 'online nakupujících', fmt: (v) => pct(v), src: 's. 8 – % populace 16–74 let, která nakoupila online (2025)' },
+    growth: { t: 'růstu obratu', fmt: (v) => sgn(v), src: 's. 9 – meziroční růst obratu B2C v eurech (2025); kurzové změny ovlivňují země mimo eurozónu' },
+    ecompc: { t: 'útraty online na obyvatele', fmt: (v) => eur(v), src: 's. 10 – obrat B2C e-commerce / počet obyvatel (2025). Pozor: různý rozsah dat (zboží vs. zboží + služby)' },
+    egdp: { t: 'podílu e-commerce na HDP', fmt: (v) => pct(v, 2), src: 's. 9 – obrat B2C / HDP (2025). Hodnota za Česko je v reportu pravděpodobně chybná, viz sekce Česko' },
+    internet: { t: 'uživatelů internetu', fmt: (v) => pct(v), src: 's. 8 – % populace 16–74 let (2025)' },
+    gdppc: { t: 'HDP na obyvatele', fmt: (v) => eur(v), src: 's. 10 – MMF, OSN (2025). Hodnota za Česko odpovídá spíše Rakousku, viz sekce Česko' },
+  };
+
+  const CZ = [
+    { y: '2021', czk: 324, eur: 12.6 },
+    { y: '2022', czk: 286, eur: 11.6, g: -12 },
+    { y: '2023', czk: 268, eur: 11.2, g: -6 },
+    { y: '2024', czk: 281, eur: 11.2, g: 5 },
+    { y: '2025', czk: 298, eur: 12.1, g: 6 },
+    { y: '2026', czk: 313, eur: 12.9, g: 5, f: true },
+  ];
+
+  const CEE = [
+    { name: 'Česko', turnover: 12.1, growth: 8, shoppers: 84, ecompc: 1130, mkt: 35, scope: 'zboží 69 % + služby 31 %', hl: true },
+    { name: 'Polsko', turnover: 47.4, growth: 9, shoppers: 70, ecompc: 1236, mkt: 64, scope: 'zboží 81 % + služby 19 %' },
+    { name: 'Švýcarsko', turnover: 16.9, growth: 8, shoppers: 86, ecompc: 1885, mkt: null, scope: 'jen zboží' },
+    { name: 'Rakousko', turnover: 10.1, growth: 4, shoppers: 73, ecompc: 1103, mkt: 46, scope: 'jen zboží' },
+    { name: 'Maďarsko', turnover: 3.4, growth: 5, shoppers: 68, ecompc: 352, mkt: 41, scope: 'jen zboží' },
+    { name: 'Slovensko', turnover: 2.1, growth: 11, shoppers: 79, ecompc: 380, mkt: 33, scope: 'odhad Statista' },
+    { name: 'Slovinsko', turnover: 1.0, growth: 11, shoppers: 67, ecompc: 484, mkt: 43, scope: 'odhad Statista' },
+  ];
+  const CEE_AGG = { name: 'Střední Evropa celkem', turnover: 93, growth: null, shoppers: 74, ecompc: null, mkt: null, scope: '' };
+
+  /* ---------- tooltip ---------- */
+  const tip = document.getElementById('tip');
+  document.addEventListener('pointermove', (e) => {
+    const t = e.target.closest('[data-tip]');
+    if (!t) { tip.classList.remove('on'); return; }
+    tip.innerHTML = t.dataset.tip;
+    tip.classList.add('on');
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    let x = e.clientX + 14, y = e.clientY + 14;
+    if (x + w > innerWidth - 8) x = e.clientX - w - 14;
+    if (y + h > innerHeight - 8) y = e.clientY - h - 14;
+    tip.style.left = Math.max(8, x) + 'px';
+    tip.style.top = Math.max(8, y) + 'px';
+  });
+  document.addEventListener('scroll', () => tip.classList.remove('on'), { passive: true });
+
+  /* ---------- sloupcový graf ---------- */
+  function columns(el, rows, { fmt, sub, note, min = 0, aria }) {
+    const max = Math.max(...rows.map((r) => r.v));
+    const lo = min;
+    el.setAttribute('role', 'img');
+    el.setAttribute('aria-label', aria + ': ' + rows.map((r) => `${r.y}${r.f ? ' (prognóza)' : ''} ${fmt(r.v)}`).join(', '));
+    const colHtml = rows.map((r) => {
+      const h = Math.max(2, ((r.v - lo) / (max - lo)) * 100);
+      const s = sub ? sub(r) : '';
+      const t = `<b>${r.y}${r.f ? ' – prognóza' : ''}</b><br>${fmt(r.v)}${s ? ' (' + s + ')' : ''}${r.note ? '<br>' + esc(r.note) : ''}`;
+      return `<div class="col${r.f ? ' f' : ''}${r.hl ? ' hl' : ''}" data-tip="${esc(t)}">
+        <div class="val">${fmt(r.v)}${s ? `<small>${s}</small>` : ''}</div>
+        <div class="bar" style="height:${h}%"></div></div>`;
+    }).join('');
+    const labels = rows.map((r) => `<div>${r.y}${r.f ? NB + '(P)' : ''}</div>`).join('');
+    const notes = note ? `<div class="col-notes" aria-hidden="true">${rows.map(note).join('')}</div>` : '';
+    el.innerHTML = `<div class="cols">${colHtml}</div><div class="col-labels" aria-hidden="true">${labels}</div>${notes}`;
+  }
+
+  /* ---------- horizontální bary ---------- */
+  function barList(el, rows, { fmt, rank = false, tipFn }) {
+    const max = Math.max(...rows.map((r) => Math.abs(r.v)));
+    el.innerHTML = rows.map((r, i) => {
+      const w = (Math.abs(r.v) / max) * 100;
+      const t = tipFn ? tipFn(r, i) : `<b>${esc(r.n)}</b><br>${fmt(r.v)}`;
+      return `<div class="brow${r.hl ? ' hl' : ''}" data-tip="${esc(t)}">
+        <div class="n">${rank ? `<span class="r">${i + 1}.</span>` : ''}${esc(r.n)}</div>
+        <div class="t"><div class="b${r.v < 0 ? ' neg' : ''}" style="width:${w}%"></div></div>
+        <div class="v">${fmt(r.v)}</div></div>`;
+    }).join('');
+  }
+
+  /* ---------- přepínače ---------- */
+  const state = { turnover: 'europe', regions: 'share', rank: 'shoppers', rankFilter: 'all', web: 'webOwn' };
+  const render = {};
+  document.querySelectorAll('.seg[data-target]').forEach((seg) => {
+    seg.addEventListener('click', (e) => {
+      const b = e.target.closest('button');
+      if (!b) return;
+      seg.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      const target = seg.dataset.target;
+      state[target] = b.dataset.key;
+      (render[target] || render[target.replace('Filter', '')])();
+    });
+  });
+
+  render.turnover = () => {
+    const d = TURNOVER[state.turnover];
+    columns(document.getElementById('chart-turnover'), d.rows, {
+      fmt: (v) => nf(0).format(v),
+      aria: 'Obrat B2C e-commerce, ' + d.label + ', mld. €',
+      note: (r) => r.note ? `<div>${esc(r.note)}</div>` : '<div></div>',
+    });
+  };
+  columns(document.getElementById('chart-shoppers'), YEARS.map((y, i) => ({ y, v: SHOPPERS[i], f: i === 5 })), {
+    fmt: (v) => pct(v), aria: 'Podíl online nakupujících v Evropě',
+  });
+  columns(document.getElementById('chart-egdp'), YEARS.map((y, i) => ({ y, v: EGDP[i], f: i === 5 })), {
+    fmt: (v) => pct(v, 2), aria: 'E-GDP Evropy',
+  });
+
+  render.regions = () => {
+    const k = state.regions;
+    const fmts = { share: (v) => pct(v), shoppers: (v) => pct(v), egdp: (v) => pct(v, 2), internet: (v) => pct(v) };
+    const rows = REGIONS.map((r) => ({ ...r, v: r[k] })).sort((a, b) => b.v - a.v);
+    barList(document.getElementById('chart-regions'), rows, {
+      fmt: fmts[k],
+      tipFn: (r) => `<b>${esc(r.n)}</b><br>Obrat ${bn(r.bn)} (${pct(r.share)})<br>Online nakupující ${pct(r.shoppers)}<br>E-GDP ${pct(r.egdp, 2)}<br>Internet ${pct(r.internet)}`,
+    });
+  };
+
+  render.rank = () => {
+    const meta = RANK_META[state.rank];
+    const f = state.rankFilter;
+    let rows = Object.entries(M[state.rank]).map(([n, v]) => ({ n, v, hl: n === 'Česko' }));
+    const total = rows.length;
+    const czAll = rows.findIndex((r) => r.hl) + 1;
+    if (f === 'eu') rows = rows.filter((r) => EU.has(r.n));
+    if (f === 'C') rows = rows.filter((r) => REGION_OF[r.n] === 'C');
+    rows.sort((a, b) => b.v - a.v);
+    const czPos = rows.findIndex((r) => r.hl) + 1;
+    const scope = f === 'eu' ? 'v EU-27' : f === 'C' ? 've střední Evropě' : 'ze ' + total + ' zemí';
+    document.getElementById('rank-note').innerHTML = ty(
+      `Česko je <b>${czPos}.</b> ${scope} v ${meta.t} (${meta.fmt(M[state.rank]['Česko'])})` +
+      (f !== 'all' ? `, celkově ${czAll}. ze ${total}.` : '.'));
+    barList(document.getElementById('chart-rank'), rows, { fmt: meta.fmt, rank: true });
+    document.getElementById('rank-src').innerHTML = ty('Zdroj: European E-commerce Report 2026, ' + meta.src + '.');
+  };
+
+  render.web = () => {
+    const rows = Object.entries(M[state.web]).map(([n, v]) => ({ n, v, hl: n === 'Česko' })).sort((a, b) => b.v - a.v);
+    barList(document.getElementById('chart-web'), rows, {
+      fmt: (v) => pct(v), rank: true,
+      tipFn: (r) => `<b>${esc(r.n)}</b><br>Vlastní web: ${pct(M.webOwn[r.n])}<br>Marketplace: ${pct(M.webMkt[r.n])}`,
+    });
+  };
+
+  /* digitální intenzita */
+  (() => {
+    const cats = ['Velmi nízká', 'Nízká', 'Vysoká', 'Velmi vysoká'];
+    const data = [{ n: 'Malé a střední', v: [29, 35, 27, 9] }, { n: 'Velké firmy', v: [4, 14, 40, 43] }];
+    const el = document.getElementById('chart-di');
+    el.innerHTML = data.map((d) => `<div class="stack-row"><div class="small"><b>${d.n}</b></div>
+      <div class="stack" role="img" aria-label="${d.n}: ${d.v.map((v, i) => cats[i] + ' ' + v + ' %').join(', ')}">
+      ${d.v.map((v, i) => `<div class="di-${i + 1}" style="flex:${v}" data-tip="${esc(`<b>${d.n}</b><br>${cats[i]}: ${pct(v)}`)}">${v >= 8 ? pct(v) : ''}</div>`).join('')}
+      </div></div>`).join('') +
+      `<div class="legend">${cats.map((c, i) => `<span><i class="di-${i + 1}"></i>${c}</span>`).join('')}</div>`;
+  })();
+
+  /* ČR */
+  columns(document.getElementById('chart-cz'), CZ.map((r) => ({ y: r.y, v: r.czk, f: r.f, hl: true, eur: r.eur, g: r.g })), {
+    fmt: (v) => nf(0).format(v),
+    sub: (r) => nf(1).format(r.eur) + NB + '€',
+    aria: 'Obrat B2C e-commerce v Česku, mld. Kč',
+    note: (r) => r.g == null ? '<div>–</div>' : `<div class="${r.g >= 0 ? 'pos' : 'neg'}">${sgn(r.g)}</div>`,
+  });
+
+  /* tabulka střední Evropy */
+  const tbody = document.querySelector('#cee-table tbody');
+  const cell = (v, f) => (v == null ? '<span class="muted">–</span>' : f(v));
+  const rowHtml = (r, cls = '') => `<tr class="${cls}"><td>${esc(r.name)}</td><td>${cell(r.turnover, (v) => nf(1).format(v))}</td><td>${cell(r.growth, sgn)}</td><td>${cell(r.shoppers, pct)}</td><td>${cell(r.ecompc, eur)}</td><td>${cell(r.mkt, pct)}</td><td><span class="scope">${esc(r.scope).replace(/ %/g, NB + '%')}</span></td></tr>`;
+  let sortK = 'turnover', sortDir = -1;
+  function renderTable() {
+    const rows = [...CEE].sort((a, b) => {
+      if (sortK === 'name') return sortDir * a.name.localeCompare(b.name, 'cs');
+      const x = a[sortK] ?? -Infinity, y = b[sortK] ?? -Infinity;
+      return sortDir * (x - y);
+    });
+    tbody.innerHTML = rows.map((r) => rowHtml(r, r.hl ? 'hl' : '')).join('') + rowHtml(CEE_AGG, 'agg');
+    document.querySelectorAll('#cee-table th').forEach((th) => {
+      if (th.dataset.k === sortK) th.setAttribute('aria-sort', sortDir > 0 ? 'ascending' : 'descending');
+      else th.removeAttribute('aria-sort');
+    });
+  }
+  document.querySelectorAll('#cee-table th').forEach((th) => {
+    if (th.dataset.k === 'scope') return;
+    th.tabIndex = 0;
+    const go = () => { if (sortK === th.dataset.k) sortDir *= -1; else { sortK = th.dataset.k; sortDir = th.dataset.k === 'name' ? 1 : -1; } renderTable(); };
+    th.addEventListener('click', go);
+    th.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+  });
+
+  render.turnover(); render.regions(); render.rank(); render.web(); renderTable();
+
+  /* ---------- scrollspy ---------- */
+  const links = [...document.querySelectorAll('.nav a')];
+  const secs = links.map((a) => document.querySelector(a.getAttribute('href')));
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
+      const act = links.find((a) => a.classList.contains('active'));
+      if (act) act.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  secs.forEach((s) => s && spy.observe(s));
+
+  /* ---------- přepínač motivu ---------- */
+  document.getElementById('themeBtn').addEventListener('click', () => {
+    const root = document.documentElement;
+    const isDark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = isDark ? 'light' : 'dark';
+    try { localStorage.setItem('eer-theme', root.dataset.theme); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
