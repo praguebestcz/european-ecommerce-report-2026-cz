@@ -288,6 +288,23 @@ blockquote cite { display: block; font: 500 13.5px var(--sans); color: var(--ink
 .pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); margin: 0 4px 4px 0; }
 
 
+/* naše produkty */
+.product { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin-top: 20px; overflow: hidden; }
+.product header { padding: 22px 26px; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; }
+.product header h3 { font-size: 26px; }
+.product header p { margin: 0; color: var(--ink-2); }
+.product-body { display: grid; grid-template-columns: 1fr 1fr; }
+.product-body > div { padding: 22px 26px; }
+.product h4 { margin: 0 0 10px; font: 700 13px var(--sans); letter-spacing: .07em; text-transform: uppercase; color: var(--ink-3); }
+.product ul { margin: 0; padding-left: 20px; color: var(--ink-2); font-size: 15.5px; }
+.product li { margin-bottom: 8px; }
+.product .benefit { background: var(--accent-soft); }
+.product .benefit h4 { color: var(--accent); }
+.product dl { margin: 0; }
+.product dt { font-weight: 700; font-size: 15px; margin-top: 12px; }
+.product dt:first-child { margin-top: 0; }
+.product dd { margin: 2px 0 0; font-size: 15px; color: var(--ink-2); }
+
 /* patička */
 .download {
   background: #0b1a33 url("/img/cover.jpg") center 60% / cover; color: #fff; border-radius: 20px; padding: clamp(28px, 5vw, 48px);
@@ -310,7 +327,7 @@ footer p { max-width: 90ch; }
 
 @media (max-width: 900px) {
   .kpis { grid-template-columns: 1fr 1fr; }
-  .grid-2, .cz-grid, .trend { grid-template-columns: 1fr; }
+  .grid-2, .cz-grid, .trend, .product-body { grid-template-columns: 1fr; }
   .trend { gap: 18px; }
 }
 @media (max-width: 600px) {
@@ -319,6 +336,7 @@ footer p { max-width: 90ch; }
   .kpis { grid-template-columns: 1fr; }
   .brand span { display: none; }
   .card { padding: 18px 14px; }
+  .product header, .product-body > div { padding: 18px 16px; }
   .brow { grid-template-columns: 112px 1fr 56px; gap: 8px; padding: 3px 2px; }
   .brow .n { font-size: 13px; }
   .brow .v { font-size: 13px; }
@@ -358,6 +376,7 @@ footer p { max-width: 90ch; }
       <a href="#zebricky">Žebříčky zemí</a>
       <a href="#cesko">Česko a&nbsp;střední Evropa</a>
       <a href="#trendy">Trendy a&nbsp;dopady</a>
+      <a href="#produkty">Naše produkty</a>
       <a href="#metodika">Metodika</a>
     </nav>
     <div class="tools">
@@ -772,6 +791,107 @@ footer p { max-width: 90ch; }
       </aside>
     </div>
 
+  </div>
+</section>
+
+<!-- NAŠE PRODUKTY -->
+<section class="block" id="produkty">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Naše produkty</div>
+      <h2>Kde pomohou naše produkty</h2>
+      <p>Tři trendy z&nbsp;reportu míří stejným směrem: zákazník objevuje produkty přes AI asistenty, je citlivý na&nbsp;cenu a&nbsp;rozhoduje kvalita dat a&nbsp;zkušenost na&nbsp;webu. Naše produkty pokrývají celý řetězec. Content studio data připraví, Upsearch je zpřístupní zákazníkům i&nbsp;AI agentům a&nbsp;Big data analýzy z&nbsp;nich udělají vyšší tržby a&nbsp;nižší náklady.</p>
+      <p class="small muted" style="margin-top:8px">Naše doporučení. Report o&nbsp;produktech nemluví, odkazy na&nbsp;strany slouží jako opora argumentů.</p>
+    </div>
+
+    <article class="product">
+      <header>
+        <h3>Upsearch</h3>
+        <p>Chytré vyhledávání pro zákazníky i&nbsp;AI agenty</p>
+      </header>
+      <div class="product-body">
+        <div>
+          <h4>Co říká report</h4>
+          <ul>
+            <li>V&nbsp;Dánsku už 45&nbsp;% spotřebitelů použilo AI při průzkumu nebo nákupu, většinou ke srovnání, ne&nbsp;k&nbsp;rozhodnutí (s.&nbsp;40).</li>
+            <li>38&nbsp;% spotřebitelů ve&nbsp;Francii, Německu a&nbsp;UK používá AI nástroje při výběru produktu (McKinsey, s.&nbsp;104).</li>
+            <li>Agentní AI mění nejdřív objevování a&nbsp;srovnávání, ne&nbsp;samotný nákup (DE s.&nbsp;23, ES s.&nbsp;104).</li>
+            <li>Obchodník si má udržet vztah se&nbsp;zákazníkem; pravidla viditelnosti v&nbsp;agentních prostředích zatím nejsou jasná (s.&nbsp;23).</li>
+          </ul>
+        </div>
+        <div class="benefit">
+          <h4>Přínos pro klienta</h4>
+          <dl>
+            <dt>Návštěva z&nbsp;AI asistenta je nejcennější</dt>
+            <dd>Zákazník přichází s&nbsp;konkrétní představou formulovanou přirozenou větou. Upsearch dotazu rozumí, zákazník najde přesně to, co hledá, a&nbsp;nevrací se do&nbsp;asistenta.</dd>
+            <dt>Vyhledávání jako rozhraní pro AI agenty</dt>
+            <dd>Až budou nakupovat agenti, budou se katalogu ptát přes API. Upsearch se tak stane vstupní branou, přes kterou agent najde a&nbsp;vybere produkt.</dd>
+            <dt>Data o&nbsp;poptávce</dt>
+            <dd>Co lidé hledají a&nbsp;nenajdou, je přímý podklad pro doplnění sortimentu a&nbsp;obsahu v&nbsp;Content studiu.</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <header>
+        <h3>Content studio</h3>
+        <p>AI generování produktového obsahu</p>
+      </header>
+      <div class="product-body">
+        <div>
+          <h4>Co říká report</h4>
+          <ul>
+            <li>AI se nejvíc nasazuje na&nbsp;tvorbu produktového obsahu, aktualizaci katalogu a&nbsp;zákaznický servis (FR s.&nbsp;20, ES s.&nbsp;105).</li>
+            <li>Malé a&nbsp;střední firmy hrozí, že s&nbsp;AI zaostanou; velcí hráči se přizpůsobují rychleji (LU s.&nbsp;31, PT s.&nbsp;100).</li>
+            <li>Environmentální tvrzení musí být doložitelná, přibývají QR kódy a&nbsp;digitální produktové pasy (ES s.&nbsp;104, AT s.&nbsp;57).</li>
+            <li>Prodej přes marketplaces je běžný, v&nbsp;Polsku přes ně prodává 64&nbsp;% firem s&nbsp;webovým prodejem (s.&nbsp;12).</li>
+          </ul>
+        </div>
+        <div class="benefit">
+          <h4>Přínos pro klienta</h4>
+          <dl>
+            <dt>Jeden zdroj kvalitních dat pro všechny kanály</dt>
+            <dd>Web, feedy pro AI asistenty a&nbsp;reklamu v&nbsp;nich, Google Merchant Center, srovnávače i&nbsp;marketplaces, každý kanál ve&nbsp;svém schématu.</dd>
+            <dt>Strojově čitelný katalog</dt>
+            <dd>Úplné parametry podle doporučeného schématu kategorie jsou podmínkou, aby produkt našli AI asistenti i&nbsp;agenti. Stejná data zlepšují výsledky Upsearch.</dd>
+            <dt>Připravenost na&nbsp;produktové pasy</dt>
+            <dd>Materiály, původ, certifikace a&nbsp;ověřitelná tvrzení přímo v&nbsp;datech produktu.</dd>
+            <dt>Dostupné i&nbsp;pro malé a&nbsp;střední firmy</dt>
+            <dd>Klient bez vlastního obsahového týmu dosáhne kvality katalogu velkých hráčů.</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <header>
+        <h3>Big data analýzy a&nbsp;nápočty</h3>
+        <p>Segmentace, doporučené produkty a&nbsp;identifikace rizikových zákazníků</p>
+      </header>
+      <div class="product-body">
+        <div>
+          <h4>Co říká report</h4>
+          <ul>
+            <li>Zákazníci jsou citliví na&nbsp;cenu a&nbsp;sledují akce. V&nbsp;Polsku 66&nbsp;% lidí nakupuje online víc kvůli ceně, průměrná hodnota košíku ale klesá (s.&nbsp;66).</li>
+            <li>Levné platformy mimo EU zvyšují cenový tlak, Temu je v&nbsp;Rakousku dvojkou za&nbsp;Amazonem (s.&nbsp;57).</li>
+            <li>Výdejní místa mají vyšší podíl vratek a&nbsp;podvodů (DE s.&nbsp;23), vratky jsou velký náklad (SE s.&nbsp;53, AT s.&nbsp;57).</li>
+            <li>Odložené platby (BNPL) zvyšují konverzi, ale nesou vyšší poplatky a&nbsp;riziko (PL s.&nbsp;65, NL s.&nbsp;34).</li>
+          </ul>
+        </div>
+        <div class="benefit">
+          <h4>Přínos pro klienta</h4>
+          <dl>
+            <dt>Segmentace zákazníků</dt>
+            <dd>Cílené akce a&nbsp;věrnostní nabídky místo plošných slev, aby lokální <span class="nw">e-shop</span> nesoutěžil jen cenou.</dd>
+            <dt>Doporučené produkty</dt>
+            <dd>Analýza nákupního košíku a&nbsp;trendů zvyšuje hodnotu košíku a&nbsp;relevanci nabídky. Stejné výpočty mohou zpřesňovat řazení výsledků v&nbsp;Upsearch.</dd>
+            <dt>Problémoví zákazníci a&nbsp;blacklist</dt>
+            <dd>Nižší náklady na&nbsp;vratky, podvody a&nbsp;nevyzvednuté zásilky; cílené omezení dobírky nebo odložené platby u&nbsp;rizikových zákazníků.</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
   </div>
 </section>
 
