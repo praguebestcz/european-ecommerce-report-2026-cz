@@ -79,11 +79,12 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+html { scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
   font: 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 a { color: var(--accent); }
 .nw { white-space: nowrap; }
@@ -100,8 +101,7 @@ p { margin: 0 0 1em; }
 /* ---------- navigace ---------- */
 .topbar {
   position: sticky; top: 0; z-index: 50;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
 }
 .topbar .wrap { display: flex; align-items: center; gap: 16px; height: 56px; }
@@ -378,12 +378,6 @@ footer p { max-width: 90ch; }
     <div class="eyebrow">European <span class="nw">E-commerce</span> Report&nbsp;2026 · souhrn</div>
     <h1>Evropská <span class="nw">e-commerce</span> 2026</h1>
     <p class="lead">Co z&nbsp;nového reportu Ecommerce Europe a&nbsp;EuroCommerce potřebuje vědět produktový a&nbsp;projektový tým: čísla za&nbsp;38&nbsp;evropských zemí, pohled na&nbsp;Česko a&nbsp;střední Evropu a&nbsp;trendy, které budou ovlivňovat naše <span class="nw">e-shopy</span> v&nbsp;roce&nbsp;2027.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="https://www.eurocommerce.eu/app/uploads/2026/09/cmi2026-light.pdf" target="_blank" rel="noopener">
-        <span aria-hidden="true">↓</span> Stáhnout celý report <small>PDF · 109&nbsp;stran · 2&nbsp;MB · EN</small>
-      </a>
-      <a class="btn btn-ghost" href="#cesko">Rovnou na&nbsp;Česko →</a>
-    </div>
     <p class="meta">Zdroj: Weltevreden, J.&nbsp;W.&nbsp;J. (2026). <i>European <span class="nw">E-commerce</span> Report&nbsp;2026.</i> Amsterdam University of&nbsp;Applied Sciences &amp; Ecommerce Europe, ve&nbsp;spolupráci s&nbsp;EuroCommerce. Vydáno v&nbsp;září&nbsp;2026, data za&nbsp;rok&nbsp;2025 a&nbsp;prognóza na&nbsp;rok&nbsp;2026.</p>
   </div>
 </section>
@@ -927,19 +921,27 @@ footer p { max-width: 90ch; }
 
   /* ---------- tooltip ---------- */
   const tip = document.getElementById('tip');
+  let tipEl = null, tipFrame = 0, lastEv = null;
+  const hideTip = () => { if (tipEl) { tipEl = null; tip.classList.remove('on'); } };
   document.addEventListener('pointermove', (e) => {
-    const t = e.target.closest('[data-tip]');
-    if (!t) { tip.classList.remove('on'); return; }
-    tip.innerHTML = t.dataset.tip;
-    tip.classList.add('on');
+    if (e.pointerType !== 'mouse') return;
+    lastEv = e;
+    if (!tipFrame) tipFrame = requestAnimationFrame(moveTip);
+  }, { passive: true });
+  function moveTip() {
+    tipFrame = 0;
+    const e = lastEv;
+    const t = e.target.closest && e.target.closest('[data-tip]');
+    if (!t) return hideTip();
+    if (t !== tipEl) { tipEl = t; tip.innerHTML = t.dataset.tip; tip.classList.add('on'); }
     const w = tip.offsetWidth, h = tip.offsetHeight;
     let x = e.clientX + 14, y = e.clientY + 14;
     if (x + w > innerWidth - 8) x = e.clientX - w - 14;
     if (y + h > innerHeight - 8) y = e.clientY - h - 14;
     tip.style.left = Math.max(8, x) + 'px';
     tip.style.top = Math.max(8, y) + 'px';
-  });
-  document.addEventListener('scroll', () => tip.classList.remove('on'), { passive: true });
+  }
+  addEventListener('scroll', hideTip, { passive: true });
 
   /* ---------- sloupcový graf ---------- */
   function columns(el, rows, { fmt, sub, note, min = 0, aria }) {
@@ -1086,17 +1088,29 @@ footer p { max-width: 90ch; }
   render.turnover(); render.regions(); render.rank(); render.web(); renderTable();
 
   /* ---------- scrollspy ---------- */
-  const links = [...document.querySelectorAll('.nav a')];
+  const nav = document.querySelector('.nav');
+  const links = [...nav.querySelectorAll('a')];
   const secs = links.map((a) => document.querySelector(a.getAttribute('href')));
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach((en) => {
-      if (!en.isIntersecting) return;
-      links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
-      const act = links.find((a) => a.classList.contains('active'));
-      if (act) act.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
-  secs.forEach((s) => s && spy.observe(s));
+  let spyFrame = 0, current = null;
+  function spy() {
+    spyFrame = 0;
+    const y = scrollY + innerHeight * 0.35;
+    let idx = -1;
+    secs.forEach((sec, i) => { if (sec && sec.offsetTop <= y) idx = i; });
+    const link = links[idx] || null;
+    if (link === current) return;
+    if (current) current.classList.remove('active');
+    current = link;
+    if (!link) return;
+    link.classList.add('active');
+    // jen vodorovně posunout menu, nikdy ne stránku (scrollIntoView by přerušil scroll stránky)
+    const l = link.offsetLeft - nav.offsetLeft, r = l + link.offsetWidth;
+    if (l < nav.scrollLeft) nav.scrollLeft = l - 8;
+    else if (r > nav.scrollLeft + nav.clientWidth) nav.scrollLeft = r - nav.clientWidth + 8;
+  }
+  addEventListener('scroll', () => { if (!spyFrame) spyFrame = requestAnimationFrame(spy); }, { passive: true });
+  addEventListener('resize', spy, { passive: true });
+  spy();
 
   /* ---------- přepínač motivu ---------- */
   document.getElementById('themeBtn').addEventListener('click', () => {
