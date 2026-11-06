@@ -287,11 +287,6 @@ blockquote cite { display: block; font: 500 13.5px var(--sans); color: var(--ink
 .impact dd { margin: 2px 0 0; font-size: 15px; color: var(--ink-2); }
 .pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 999px; background: var(--surface-2); color: var(--ink-2); margin: 0 4px 4px 0; }
 
-.checklist { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px 28px; padding: 0; margin: 0; list-style: none; }
-.checklist li { position: relative; padding-left: 32px; font-size: 15.5px; }
-.checklist li::before {
-  content: ""; position: absolute; left: 0; top: 3px; width: 18px; height: 18px; border-radius: 5px; border: 2px solid var(--accent);
-}
 
 /* patička */
 .download {
@@ -777,21 +772,6 @@ footer p { max-width: 90ch; }
       </aside>
     </div>
 
-    <div class="card" style="margin-top:28px">
-      <h3 style="margin-bottom:6px">Kontrolní seznam pro nové <span class="nw">e-commerce</span> projekty</h3>
-      <p class="sub">Shrnutí výše uvedeného, doporučujeme projít při discovery fázi.</p>
-      <ul class="checklist">
-        <li>Produktová data jsou strukturovaná a&nbsp;exportovatelná pro AI asistenty, srovnávače i&nbsp;marketplaces.</li>
-        <li>Je promyšlené, jak <span class="nw">e-shop</span> obslouží AI agenta (API košíku a&nbsp;checkoutu, aktuální ceny a&nbsp;sklad).</li>
-        <li>Checkout umí přidat novou platební metodu bez přestavby (mobilní peněženky, BNPL, instantní platby).</li>
-        <li>Výdejní boxy a&nbsp;výdejní místa jsou v&nbsp;MVP, včetně mapy a&nbsp;vratek.</li>
-        <li>Je jasné, čím <span class="nw">e-shop</span> vyhrává mimo cenu (servis, rychlost, důvěra), a&nbsp;UX to ukazuje.</li>
-        <li>Je zvážen AI modul pro obsah, zákaznickou podporu nebo vratky.</li>
-        <li>Datový model počítá s&nbsp;udržitelnostními atributy a&nbsp;ověřitelnými tvrzeními.</li>
-        <li>Pro přeshraniční klienty jsou v&nbsp;odhadu lokální platby a&nbsp;dopravci (BLIK, iDEAL/Wero…).</li>
-        <li>Pro SME klienta je v&nbsp;rozpočtu onboarding a&nbsp;podpora, ne&nbsp;jen implementace.</li>
-      </ul>
-    </div>
   </div>
 </section>
 
